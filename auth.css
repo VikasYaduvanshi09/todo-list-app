@@ -1,0 +1,162 @@
+/* Authentication Styles */
+.auth-container {
+    max-width: 450px;
+    padding: 30px;
+}
+
+.auth-form { 
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #333;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #667eea;
+    outline: none;
+}
+
+.error-message {
+    display: block;
+    color: #ff6b6b;
+    font-size: 14px;
+    margin-top: 5px;
+    min-height: 20px;
+}
+
+.auth-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #667eea;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.auth-button:hover {
+    background-color: #5a6fd1;
+}
+
+.auth-links {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+}
+
+.auth-links a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.auth-links a:hover {
+    text-decoration: underline;
+}
+
+/* Password Strength Meter */
+.password-strength {
+    margin-bottom: 15px;
+}
+
+.strength-meter {
+    height: 4px;
+    background-color: #eee;
+    border-radius: 2px;
+    margin-bottom: 5px;
+}
+
+.strength-meter-fill {
+    height: 100%;
+    border-radius: 2px;
+    transition: width 0.3s, background-color 0.3s;
+    width: 0;
+}
+
+#password-strength-text {
+    font-size: 12px;
+    color: #777;
+}
+
+/* Password Toggle */
+.password-input-container {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #777;
+    cursor: pointer;
+}
+
+.toggle-password:hover {
+    color: #667eea;
+}
+
+/* Form Options */
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+}
+
+.remember-me input {
+    margin-right: 5px;
+}
+
+.forgot-password {
+    color: #667eea;
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .auth-container {
+        padding: 20px;
+    }
+    
+    .form-group input {
+        font-size: 14px;
+    }
+    
+    .auth-button {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Todo List</h1>
+            <div class="user-info">
+                <span id="user-name">User</span>
+                <button id="logout-btn" class="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </button>
+            </div>
+        </header>
+
+        <div class="todo-app">
+            <div class="add-task">
+                <input type="text" id="task-input" placeholder="Add a new task..." maxlength="200">
+                <button id="add-task-btn">
+                    <i class="fas fa-plus"></i> Add Task
+                </button>
+            </div>
+
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="active">Active</button>
+                <button class="filter-btn" data-filter="completed">Completed</button>
+            </div>
+
+            <div class="task-stats">
+                <span id="tasks-counter">0 tasks left</span>
+                <button id="clear-completed" class="clear-btn">
+                    <i class="fas fa-broom"></i> Clear Completed
+                </button>
+            </div>
+
+            <ul id="task-list" class="task-list"></ul>
+        </div>
+    </div>
+
+    <!-- Task Template -->
+    <template id="task-template">
+        <li class="task-item">
+            <div class="task-content">
+                <input type="checkbox" class="task-check">
+                <span class="task-text"></span>
+            </div>
+            <div class="task-actions">
+                <button class="edit-btn">
+                    <i class="fas fa-edit"></i>
+                </button>
+                <button class="delete-btn">
+                    <i class="fas fa-trash"></i>
+                </button>
+            </div>
+        </li>
+    </template>
+
+    <script src="auth.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
